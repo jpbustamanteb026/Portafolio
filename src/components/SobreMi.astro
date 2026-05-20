@@ -1,0 +1,88 @@
+---
+import yo from "../assets/yo.webp";
+import { Image } from "astro:assets";
+---
+
+<div class="cuerpo">
+  <h2 class="titulo">SOBRE MÍ</h2>
+  <p class="parrafo">
+    Soy ingeniero multimedia enfocado en desarrollo web. Trabajo principalmente
+    con tecnologías como HTML, CSS, JavaScript, Typescript, Angular y Astro.
+    <br /><br />
+    Complemento mi formación con conocimientos en UX/UI y herramientas de diseño,
+    lo que me permite desarrollar interfaces funcionales, visualmente consistentes
+    y centradas en la experiencia de usuario.
+  </p>
+
+  <address class="ciudad">
+    <div class="linea"></div>
+    <span>Cali, Colombia</span>
+    <div class="linea"></div>
+  </address>
+
+  <div class="imagen-yo">
+    <Image src={yo} alt="yo" id="yo" loading="eager" />
+  </div>
+</div>
+
+<style>
+  .cuerpo {
+    display: flex;
+    padding: 24px 0 0 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    min-height: 100%;
+  }
+
+  .titulo {
+    font-family: var(--titulos);
+    font-size: var(--display-font-size-mobile);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-120);
+    margin-top: auto;
+    align-self: start;
+  }
+
+  .parrafo {
+    font-size: var(--lead-font-size-mobile);
+    line-height: var(--line-height-140);
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .ciudad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .linea {
+    width: 2.5rem;
+    height: 0.125rem;
+    background: var(--color-rosa);
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  .imagen-yo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  #yo {
+    width: auto;
+    height: 24dvh;
+  }
+</style>

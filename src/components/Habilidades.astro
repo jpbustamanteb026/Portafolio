@@ -1,0 +1,23 @@
+---
+import HabilidadesStack from "./HabilidadesStack.astro";
+
+const habilidades = [
+  {
+    name: "Aprendizaje rápido",
+    icon: "/icons/aprendizaje-rapido.svg",
+  },
+  {
+    name: "Trabajo en equipo",
+    icon: "/icons/trabajo-equipo.svg",
+  },
+  {
+    name: "Proactivo",
+    icon: "/icons/proactivo.svg",
+  },
+];
+---
+
+<div class="categoria">
+  <h2 class="titulo-categoria">Habilidades Personales</h2>
+  <HabilidadesStack items={habilidades} />
+</div>

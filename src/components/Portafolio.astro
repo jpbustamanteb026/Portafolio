@@ -1,0 +1,46 @@
+---
+import Cards from "./CardPortfolio.astro";
+
+const stack = [
+  {
+    name: "ANGULAR",
+    icon: "/icons/angular.svg",
+  },
+  {
+    name: "ASTRO",
+    icon: "/icons/astro.svg",
+  },
+  {
+    name: "MAQUETAS",
+    icon: "/icons/figma.svg",
+  },
+  {
+    name: "PRÓXIMAMENTE",
+    icon: "/icons/proximamente.svg",
+  },
+];
+---
+
+<div class="cuerpo">
+  <h2 class="titulo">PORTAFOLIO</h2>
+  <Cards items={stack} />
+</div>
+
+<style>
+  .cuerpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    min-height: calc(100dvh - 2.88rem);
+  }
+
+  .titulo {
+    color: var(--color-blanco);
+    font-family: var(--titulos);
+    font-size: var(--display-font-size-mobile);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-120);
+  }
+</style>

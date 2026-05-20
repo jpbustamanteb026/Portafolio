@@ -1,0 +1,44 @@
+---
+import Software from "./Software.astro";
+import Experiencia from "./Experiencia.astro";
+import "../styles/resume.css";
+import Educacion from "./Educacion.astro";
+import Habilidades from "./Habilidades.astro";
+import Idiomas from "./Idiomas.astro";
+---
+
+<div class="cuerpo">
+  <div class="titulo">RESUME</div>
+  <Software />
+  <Experiencia />
+  <Educacion />
+  <Habilidades />
+  <Idiomas />
+  <div class="flecha-top">
+    <img src="/icons/flecha-arriba.svg" alt="volver a la parte superior" />
+  </div>
+</div>
+
+<style>
+  .cuerpo {
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .titulo {
+    color: var(--color-blanco);
+    font-family: var(--titulos);
+    font-size: var(--display-font-size-mobile);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-120);
+  }
+
+  .flecha-top {
+    display: flex;
+    padding: 0.1rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

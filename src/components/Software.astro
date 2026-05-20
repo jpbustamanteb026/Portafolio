@@ -1,0 +1,61 @@
+---
+import Stack from "./Stack.astro";
+
+const desarrollo = [
+  {
+    name: "HTML",
+    icon: "/icons/html.svg",
+  },
+  {
+    name: "CSS",
+    icon: "/icons/css.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "/icons/javascript.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "/icons/typescript.svg",
+  },
+  {
+    name: "Angular",
+    icon: "/icons/angular.svg",
+  },
+  {
+    name: "Astro",
+    icon: "/icons/astro.svg",
+  },
+];
+
+const diseno = [
+  {
+    name: "Figma",
+    icon: "/icons/figma.svg",
+  },
+  {
+    name: "Photoshop",
+    icon: "/icons/photoshop.svg",
+  },
+  {
+    name: "Illustrator",
+    icon: "/icons/illustrator.svg",
+  },
+  {
+    name: "Affinity",
+    icon: "/icons/affinity.svg",
+  },
+  {
+    name: "Inkscape",
+    icon: "/icons/inkscape.svg",
+  },
+];
+---
+
+<div class="categoria">
+  <h2 class="titulo-categoria">SOFTWARE</h2>
+  <div class="sub-categoria">
+    <Stack title="DESARROLLO" items={desarrollo} />
+    <Stack title="COMPLEMENTO" items={diseno} />
+  </div>
+</div>

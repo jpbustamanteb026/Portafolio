@@ -1,0 +1,56 @@
+---
+const { title, items } = Astro.props;
+---
+
+<section class="skills">
+  <div class="skills-title">{title}</div>
+
+  <div class="skills-list">
+    {
+      items.map((item: any) => (
+        <div class="skill-item">
+          <img src={item.icon} alt={item.name} />
+          <span>{item.name}</span>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .skills {
+    display: flex;
+    height: 22rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .skills-title {
+    color: var(--color-blanco);
+    text-align: center;
+    font-family: var(--titulos);
+    font-size: var(--h4-font-size-mobile);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-120);
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+
+  img {
+    width: 1.4rem;
+    aspect-ratio: 11/12;
+  }
+</style>

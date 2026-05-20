@@ -1,0 +1,47 @@
+---
+
+---
+
+<div class="categoria">
+  <h2 class="titulo-categoria">Idiomas</h2>
+  <dl class="idiomas">
+    <div class="idioma">
+      <dt>Español</dt>
+      <dd>Nativo</dd>
+    </div>
+    <div class="idioma">
+      <dt>Inglés</dt>
+      <dd>B2</dd>
+    </div>
+  </dl>
+</div>
+
+<style>
+  .idiomas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+  .idioma {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .idioma dt {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .idioma dt::after {
+    content: " -";
+  }
+
+  .idioma dd {
+    font-size: var(--lead-font-size-mobile);
+    line-height: var(--line-height-140);
+    font-weight: var(--font-weight-regular);
+  }
+</style>
