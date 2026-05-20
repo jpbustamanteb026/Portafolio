@@ -4,7 +4,7 @@ Sitio web personal con información de presentación, portafolio, hoja de vida y
 
 ## Demo en vivo
 
-[jpbustamanteb026.github.io/...](https://jpbustamanteb026.github.io/Portafolio/)
+[Ver Proyecto](https://jpbustamanteb026.github.io/Portafolio/)
 
 ## Páginas
 
