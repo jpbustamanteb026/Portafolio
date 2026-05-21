@@ -20,6 +20,8 @@ jobs:
 
       - run: pnpm install
       - run: pnpm build
+        env:
+          PUBLIC_BASE_PATH: /Portafolio
 
       - uses: actions/upload-pages-artifact@v3
         with:

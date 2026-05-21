@@ -1,6 +1,5 @@
 ---
-const isProd = import.meta.env.PROD;
-const b = isProd ? "/Portafolio" : "";
+const b = import.meta.env.PUBLIC_BASE_PATH ?? "";
 ---
 
 <div id="main-menu" class="nav-links">
