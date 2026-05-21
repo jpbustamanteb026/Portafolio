@@ -1,10 +1,11 @@
 ---
-
+const isProd = import.meta.env.PROD;
+const b = isProd ? "/Portafolio" : "";
 ---
 
 <div id="main-menu" class="nav-links">
-  <a href="/">Inicio</a>
-  <a href="/sobremi/">Sobre Mí</a>
-  <a href="/resume/">Resume</a>
-  <a href="/portafolio">Portafolio</a>
+  <a href={`${b}/`}>Inicio</a>
+  <a href={`${b}/sobremi`}>Sobre Mí</a>
+  <a href={`${b}/resume`}>Resume</a>
+  <a href={`${b}/portafolio`}>Portafolio</a>
 </div>
