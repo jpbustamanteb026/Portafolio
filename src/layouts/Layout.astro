@@ -26,18 +26,19 @@ import "../styles/reset.css";
     <main>
       <slot />
     </main>
+    <script>
+      import "../scripts/menu";
+    </script>
   </body>
 </html>
 
 <style>
-  /* layout */
   body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
   }
 
-  /* el slot/main crece para ocupar lo que sobra */
   main {
     flex: 1 0 0;
     display: flex;

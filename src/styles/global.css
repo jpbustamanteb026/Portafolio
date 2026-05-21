@@ -78,3 +78,36 @@ body {
   font-family: var(--cuerpo);
   color: var(--color-blanco);
 }
+
+/* Menu */
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-gris-claro);
+
+  padding: 1.5rem;
+  gap: 8%;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-blanco);
+  font-family: var(--titulos);
+  font-size: var(--display-font-size-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-120);
+}
+
+:has(.menu[aria-expanded="true"]) .nav-links {
+  display: flex;
+}
