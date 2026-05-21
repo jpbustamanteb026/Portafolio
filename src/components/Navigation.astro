@@ -1,10 +1,10 @@
 ---
-const b = import.meta.env.PUBLIC_BASE_PATH ?? "";
+import { base } from "astro:config/client";
 ---
 
 <div id="main-menu" class="nav-links">
-  <a href={`${b}/`}>Inicio</a>
-  <a href={`${b}/sobremi`}>Sobre Mí</a>
-  <a href={`${b}/resume`}>Resume</a>
-  <a href={`${b}/portafolio`}>Portafolio</a>
+  <a href={base || "/"}>Inicio</a>
+  <a href={`${base}/sobremi`}>Sobre Mí</a>
+  <a href={`${base}/resume`}>Resume</a>
+  <a href={`${base}/portafolio`}>Portafolio</a>
 </div>

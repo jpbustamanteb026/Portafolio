@@ -1,19 +1,12 @@
 ---
 import HabilidadesStack from "./HabilidadesStack.astro";
 
+const base = import.meta.env.BASE_URL;
+
 const habilidades = [
-  {
-    name: "Aprendizaje rápido",
-    icon: "/icons/aprendizaje-rapido.svg",
-  },
-  {
-    name: "Trabajo en equipo",
-    icon: "/icons/trabajo-equipo.svg",
-  },
-  {
-    name: "Proactivo",
-    icon: "/icons/proactivo.svg",
-  },
+  { name: "Aprendizaje rápido", icon: `${base}icons/aprendizaje-rapido.svg` },
+  { name: "Trabajo en equipo", icon: `${base}icons/trabajo-equipo.svg` },
+  { name: "Proactivo", icon: `${base}icons/proactivo.svg` },
 ];
 ---
 

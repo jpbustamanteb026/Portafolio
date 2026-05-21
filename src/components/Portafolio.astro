@@ -1,23 +1,13 @@
 ---
 import Cards from "./CardPortfolio.astro";
 
+const base = import.meta.env.BASE_URL;
+
 const stack = [
-  {
-    name: "ANGULAR",
-    icon: "/icons/angular.svg",
-  },
-  {
-    name: "ASTRO",
-    icon: "/icons/astro.svg",
-  },
-  {
-    name: "MAQUETAS",
-    icon: "/icons/figma.svg",
-  },
-  {
-    name: "PRÓXIMAMENTE",
-    icon: "/icons/proximamente.svg",
-  },
+  { name: "ANGULAR", icon: `${base}icons/angular.svg` },
+  { name: "ASTRO", icon: `${base}icons/astro.svg` },
+  { name: "MAQUETAS", icon: `${base}icons/figma.svg` },
+  { name: "PRÓXIMAMENTE", icon: `${base}icons/proximamente.svg` },
 ];
 ---
 

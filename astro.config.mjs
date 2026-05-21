@@ -2,5 +2,5 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://jpbustamanteb026.github.io",
-  base: import.meta.env.PROD ? "/Portafolio" : "/",
+  base: "/Portafolio",
 });

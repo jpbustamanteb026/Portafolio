@@ -1,54 +1,23 @@
 ---
 import Stack from "./Stack.astro";
 
+const base = import.meta.env.BASE_URL;
+
 const desarrollo = [
-  {
-    name: "HTML",
-    icon: "/icons/html.svg",
-  },
-  {
-    name: "CSS",
-    icon: "/icons/css.svg",
-  },
-  {
-    name: "JavaScript",
-    icon: "/icons/javascript.svg",
-  },
-  {
-    name: "TypeScript",
-    icon: "/icons/typescript.svg",
-  },
-  {
-    name: "Angular",
-    icon: "/icons/angular.svg",
-  },
-  {
-    name: "Astro",
-    icon: "/icons/astro.svg",
-  },
+  { name: "HTML", icon: `${base}icons/html.svg` },
+  { name: "CSS", icon: `${base}icons/css.svg` },
+  { name: "JavaScript", icon: `${base}icons/javascript.svg` },
+  { name: "TypeScript", icon: `${base}icons/typescript.svg` },
+  { name: "Angular", icon: `${base}icons/angular.svg` },
+  { name: "Astro", icon: `${base}icons/astro.svg` },
 ];
 
 const diseno = [
-  {
-    name: "Figma",
-    icon: "/icons/figma.svg",
-  },
-  {
-    name: "Photoshop",
-    icon: "/icons/photoshop.svg",
-  },
-  {
-    name: "Illustrator",
-    icon: "/icons/illustrator.svg",
-  },
-  {
-    name: "Affinity",
-    icon: "/icons/affinity.svg",
-  },
-  {
-    name: "Inkscape",
-    icon: "/icons/inkscape.svg",
-  },
+  { name: "Figma", icon: `${base}icons/figma.svg` },
+  { name: "Photoshop", icon: `${base}icons/photoshop.svg` },
+  { name: "Illustrator", icon: `${base}icons/illustrator.svg` },
+  { name: "Affinity", icon: `${base}icons/affinity.svg` },
+  { name: "Inkscape", icon: `${base}icons/inkscape.svg` },
 ];
 ---
 
