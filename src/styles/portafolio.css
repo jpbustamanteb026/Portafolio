@@ -1,0 +1,32 @@
+body {
+  background-color: var(--color-negro);
+  display: flex;
+  flex-direction: column;
+}
+
+.cuerpo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  min-height: calc(100dvh - 5rem);
+}
+
+.back-link {
+  display: flex;
+  text-decoration: none;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.titulo {
+  width: auto;
+  color: var(--color-blanco);
+  font-family: var(--titulos);
+  font-size: var(--display-font-size-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-120);
+}

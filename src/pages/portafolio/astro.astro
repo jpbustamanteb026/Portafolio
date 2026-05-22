@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/portafolio.css";
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout>
+  <div class="cuerpo">
+    <a href={`${base}/portafolio`} class="back-link">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="21"
+        viewBox="0 0 14 21"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0.536764 11.6665L10.9077 21L13.5 18.667L4.42518 10.5L13.5 2.33297L10.9077 0L0.536764 9.33352C0.193074 9.64292 0 10.0625 0 10.5C0 10.9375 0.193074 11.3571 0.536764 11.6665Z"
+          fill="#D7D7D7"></path>
+      </svg>
+      <h2 class="titulo">ASTRO</h2>
+    </a>
+  </div>
+</Layout>
