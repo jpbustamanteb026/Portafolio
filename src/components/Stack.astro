@@ -9,7 +9,7 @@ const { title, items } = Astro.props;
     {
       items.map((item: any) => (
         <div class="skill-item">
-          <img src={item.icon} alt={item.name} />
+          <img src={item.icon} alt={item.name} loading="lazy" />
           <span>{item.name}</span>
         </div>
       ))
