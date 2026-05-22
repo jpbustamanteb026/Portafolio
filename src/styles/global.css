@@ -6,7 +6,7 @@
   --color-gris-oscuro: #3f3f3f;
   --color-gris-claro: #494949;
   --color-negro: #0d0d0d;
-  --color-transparente: rgba(rgba(11, 11, 11, 0.2));
+  --color-transparente: rgba(11, 11, 11, 0.2);
 
   /* Fuentes */
 
@@ -81,6 +81,15 @@ body {
 
 /* Menu */
 
+.menu {
+  background: none;
+  border: none;
+  margin: 0;
+  display: flex;
+  min-height: 46px;
+  padding: 24px 0 0 24px;
+}
+
 .nav-links {
   display: none;
   flex-direction: column;
@@ -92,7 +101,6 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--color-gris-claro);
-
   padding: 1.5rem;
   gap: 8%;
 }
@@ -110,4 +118,29 @@ body {
 
 :has(.menu[aria-expanded="true"]) .nav-links {
   display: flex;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: var(--color-transparente);
+    position: relative;
+    align-items: center;
+    justify-content: start;
+    gap: 0 2.5rem;
+  }
+
+  .nav-links a {
+    padding: 1.25rem 1.5rem;
+    font-size: var(--lead-font-size-mobile);
+    line-height: var(--line-height-140);
+  }
+
+  .menu {
+    display: none;
+  }
 }
