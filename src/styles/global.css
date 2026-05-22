@@ -140,6 +140,11 @@ body {
     line-height: var(--line-height-140);
   }
 
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--color-rosa);
+  }
+
   .menu {
     display: none;
   }

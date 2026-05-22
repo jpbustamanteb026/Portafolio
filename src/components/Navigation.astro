@@ -1,10 +1,32 @@
 ---
 import { base } from "astro:config/client";
+
+// Mantiene el color Rosa en la ventana seleccionada
+const { pathname } = Astro.url;
+
+const normalize = (path: string) => path.replace(/\/$/, "") || "/";
+
+const currentPath = normalize(pathname);
+const basePath = normalize(base || "/");
 ---
 
 <div id="main-menu" class="nav-links">
-  <a href={base || "/"}>Inicio</a>
-  <a href={`${base}/sobremi`}>Sobre Mí</a>
-  <a href={`${base}/resume`}>Resume</a>
-  <a href={`${base}/portafolio`}>Portafolio</a>
+  <a href={base || "/"} class={currentPath === basePath ? "active" : ""}
+    >Inicio</a
+  >
+  <a
+    href={`${base}/sobremi`}
+    class={currentPath === normalize(`${base}/sobremi`) ? "active" : ""}
+    >Sobre Mí</a
+  >
+  <a
+    href={`${base}/resume`}
+    class={currentPath === normalize(`${base}/resume`) ? "active" : ""}
+    >Resume</a
+  >
+  <a
+    href={`${base}/portafolio`}
+    class={currentPath === normalize(`${base}/portafolio`) ? "active" : ""}
+    >Portafolio</a
+  >
 </div>
