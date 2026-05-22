@@ -88,6 +88,7 @@ body {
   display: flex;
   min-height: 46px;
   padding: 24px 0 0 24px;
+  z-index: 2;
 }
 
 .nav-links {
@@ -103,6 +104,7 @@ body {
   background-color: var(--color-gris-claro);
   padding: 1.5rem;
   gap: 8%;
+  z-index: 2;
 }
 
 .nav-links a {
