@@ -1,4 +1,4 @@
-function setupScrollTop() {
+document.addEventListener("astro:page-load", () => {
   const btnScrollTop = document.getElementById("btnScrollTop");
 
   // Evento de click para subir suavemente
@@ -8,6 +8,4 @@ function setupScrollTop() {
       behavior: "smooth", // Esto hace que el scroll sea fluido y no un salto brusco
     });
   });
-}
-
-document.addEventListener("astro:page-load", setupScrollTop);
+});

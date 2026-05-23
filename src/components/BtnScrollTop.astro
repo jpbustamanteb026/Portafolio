@@ -1,0 +1,30 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<div class="flecha-top" id="btnScrollTop">
+  <img src=`${base}/icons/flecha-arriba.svg` alt="volver a la parte superior" />
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const btnScrollTop = document.getElementById("btnScrollTop");
+
+    // Evento de click para subir suavemente
+    btnScrollTop?.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Esto hace que el scroll sea fluido y no un salto brusco
+      });
+    });
+  });
+</script>
+
+<style>
+  .flecha-top {
+    display: flex;
+    padding: 0.1rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

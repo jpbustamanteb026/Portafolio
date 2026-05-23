@@ -5,6 +5,7 @@ import "../styles/resume.css";
 import Educacion from "./Educacion.astro";
 import Habilidades from "./Habilidades.astro";
 import Idiomas from "./Idiomas.astro";
+import BtnScrollTop from "./BtnScrollTop.astro";
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -16,17 +17,8 @@ const base = import.meta.env.BASE_URL;
   <Educacion />
   <Habilidades />
   <Idiomas />
-  <div class="flecha-top" id="btnScrollTop">
-    <img
-      src=`${base}/icons/flecha-arriba.svg`
-      alt="volver a la parte superior"
-    />
-  </div>
+  <BtnScrollTop />
 </div>
-
-<script>
-  import "../scripts/scrollTop.js";
-</script>
 
 <style>
   .cuerpo {
