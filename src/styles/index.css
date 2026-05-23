@@ -1,0 +1,143 @@
+.presentacion {
+  display: flex;
+  padding-top: 2.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2.5rem;
+  flex: 1 0 0;
+  align-self: stretch;
+  min-height: 100%;
+}
+
+.cuerpo {
+  display: flex;
+  min-height: 259px;
+  max-height: 375px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.nombre-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre {
+  color: var(--color-blanco);
+  text-align: center;
+  font-size: 2.625rem;
+  line-height: var(--line-height-120);
+}
+
+.apellido {
+  color: var(--color-blanco);
+  text-align: center;
+  font-family: var(--titulos);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: var(--line-height-120);
+}
+
+.titulo {
+  color: var(--color-blanco);
+  text-align: center;
+  font-family: var(--titulos);
+  font-size: var(--subtitle1-font-size);
+  font-weight: 300;
+  line-height: var(--line-height-120);
+  letter-spacing: 0.2275rem;
+}
+
+.boton-hoja-vida {
+  border-radius: 30px;
+  border: 2px solid var(--color-blanco);
+  display: flex;
+  padding: 17px 28px;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-blanco);
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--cuerpo);
+  font-size: var(--lead-font-size-mobile);
+  font-style: normal;
+  line-height: var(--line-height-140);
+}
+
+.imagen-japonesa {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#japonesa {
+  height: 35dvh;
+  width: auto;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .nombre {
+    font-size: 3rem;
+  }
+
+  .apellido {
+    font-size: 4rem;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    letter-spacing: 0.42rem;
+  }
+
+  .boton-hoja-vida {
+    font-size: var(--lead-font-size);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .presentacion {
+    padding-right: 29rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
+  }
+
+  .cuerpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
+  }
+
+  .boton-hoja-vida:hover {
+    border-color: var(--color-rosa);
+    color: var(--color-rosa);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  #japonesa {
+    height: 37rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .redes-sociales svg:hover {
+    cursor: pointer;
+  }
+
+  .redes-sociales svg:hover path {
+    fill: var(--color-rosa);
+    transition: fill 0.3s ease;
+  }
+}

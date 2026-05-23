@@ -2,6 +2,7 @@
 import japonesa from "../assets/japonesaSinBg.webp";
 import BotonesPresentacion from "./BotonesPresentacion.astro";
 import { Image } from "astro:assets";
+import "../styles/index.css";
 ---
 
 <div class="presentacion">
@@ -12,9 +13,8 @@ import { Image } from "astro:assets";
       <p class="titulo">Desarrollador Web</p>
     </hgroup>
 
-    <div class="boton-hoja-vida">
-      <a href="http://">Descargar Hoja de Vida</a>
-    </div>
+    <a href="http://" class="boton-hoja-vida">Descargar Hoja de Vida</a>
+
     <BotonesPresentacion />
   </div>
 
@@ -22,91 +22,3 @@ import { Image } from "astro:assets";
     <Image src={japonesa} alt="japonesa" id="japonesa" loading="eager" />
   </div>
 </div>
-
-<style>
-  .presentacion {
-    display: flex;
-    padding-top: 40px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 40px;
-    flex: 1 0 0;
-    align-self: stretch;
-    min-height: 100%;
-  }
-
-  .cuerpo {
-    display: flex;
-    min-height: 259px;
-    max-height: 375px;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    align-self: stretch;
-  }
-
-  .nombre-titulo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nombre {
-    color: var(--color-blanco);
-    text-align: center;
-    font-size: 2.625rem;
-    line-height: var(--line-height-120);
-  }
-
-  .apellido {
-    color: var(--color-blanco);
-    text-align: center;
-    font-family: var(--titulos);
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: var(--line-height-120);
-  }
-
-  .titulo {
-    color: var(--color-blanco);
-    text-align: center;
-    font-family: var(--titulos);
-    font-size: var(--subtitle1-font-size);
-    font-weight: 300;
-    line-height: var(--line-height-120);
-    letter-spacing: 0.2275rem;
-  }
-
-  .boton-hoja-vida {
-    border-radius: 30px;
-    border: 2px solid var(--color-blanco);
-
-    display: flex;
-    padding: 17px 28px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .boton-hoja-vida a {
-    color: var(--color-blanco);
-    text-align: center;
-    text-decoration: none;
-    font-family: var(--cuerpo);
-    font-size: var(--subtitle2-font-size-mobile);
-    font-style: normal;
-    line-height: var(--line-height-140);
-  }
-
-  .imagen-japonesa {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  #japonesa {
-    height: 35dvh;
-    width: auto;
-  }
-</style>

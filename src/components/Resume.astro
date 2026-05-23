@@ -6,8 +6,6 @@ import Educacion from "./Educacion.astro";
 import Habilidades from "./Habilidades.astro";
 import Idiomas from "./Idiomas.astro";
 import BtnScrollTop from "./BtnScrollTop.astro";
-
-const base = import.meta.env.BASE_URL;
 ---
 
 <div class="cuerpo">
@@ -19,27 +17,3 @@ const base = import.meta.env.BASE_URL;
   <Idiomas />
   <BtnScrollTop />
 </div>
-
-<style>
-  .cuerpo {
-    display: flex;
-    padding: 1.5rem;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .titulo {
-    color: var(--color-blanco);
-    font-family: var(--titulos);
-    font-size: var(--display-font-size-mobile);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-120);
-  }
-
-  .flecha-top {
-    display: flex;
-    padding: 0.1rem 0;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
