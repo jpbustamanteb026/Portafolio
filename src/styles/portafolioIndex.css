@@ -22,6 +22,11 @@
   text-decoration: none;
 }
 
+.skill-item:active {
+  border-color: var(--color-rosa);
+  transform: scale(0.95);
+}
+
 .skill-item span {
   color: var(--color-blanco);
   text-align: center;

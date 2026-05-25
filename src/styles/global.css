@@ -123,6 +123,10 @@ body {
   line-height: var(--line-height-120);
 }
 
+.nav-links a:active {
+  color: var(--color-rosa);
+}
+
 :has(.menu[aria-expanded="true"]) .nav-links {
   display: flex;
 }
