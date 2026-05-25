@@ -20,13 +20,38 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+  color: var(--color-blanco);
 }
 
 .titulo {
   width: auto;
-  color: var(--color-blanco);
   font-family: var(--titulos);
   font-size: var(--display-font-size-mobile);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-120);
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .titulo {
+    font-size: var(--display-font-size);
+  }
+
+  .back-link svg {
+    height: 2.7rem;
+    width: auto;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .back-link:hover {
+    color: var(--color-rosa);
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover svg path {
+    fill: var(--color-rosa);
+    transition: fill 0.3s ease;
+  }
 }
