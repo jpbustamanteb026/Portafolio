@@ -1,0 +1,16 @@
+---
+import "../styles/portafolio.css";
+
+const { items } = Astro.props;
+---
+
+<section class="project-list">
+  {
+    items.map((item: any) => (
+      <a href={item.url} class="project-item">
+        <img src={item.imgbg} alt={item.name} class="project-bg" />
+        <span>{item.name}</span>
+      </a>
+    ))
+  }
+</section>
