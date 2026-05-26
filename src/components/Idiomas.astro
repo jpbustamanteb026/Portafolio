@@ -44,4 +44,29 @@
     line-height: var(--line-height-140);
     font-weight: var(--font-weight-regular);
   }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .idioma dt {
+      font-size: var(--subtitle2-font-size);
+    }
+
+    .idioma dd {
+      font-size: var(--lead-font-size);
+    }
+
+    .idiomas {
+      justify-content: center;
+      gap: 10rem;
+      height: 100%;
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 1025px) {
+    .idiomas {
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
 </style>

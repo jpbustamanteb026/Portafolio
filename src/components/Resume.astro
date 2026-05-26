@@ -10,10 +10,52 @@ import BtnScrollTop from "./BtnScrollTop.astro";
 
 <div class="cuerpo">
   <div class="titulo">RESUME</div>
-  <Software />
-  <Experiencia />
-  <Educacion />
-  <Habilidades />
-  <Idiomas />
-  <BtnScrollTop />
+  <div class="grid-orden">
+    <div class="grid-software"><Software /></div>
+    <div class="grid-experiencia"><Experiencia /></div>
+    <div class="grid-educacion"><Educacion /></div>
+    <div class="grid-habilidades"><Habilidades /></div>
+    <div class="grid-idiomas"><Idiomas /></div>
+
+    <div class="btn-scroll"><BtnScrollTop /></div>
+  </div>
 </div>
+
+<style>
+  /* Desktop */
+  @media screen and (min-width: 1025px) {
+    .btn-scroll {
+      display: none;
+    }
+
+    .grid-orden {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 1.25rem;
+    }
+
+    .grid-software {
+      grid-row: span 2 / span 2;
+    }
+
+    .grid-experiencia {
+      grid-column-start: 2;
+    }
+
+    .grid-habilidades {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+
+    .grid-habilidades {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+
+    .grid-idiomas {
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+  }
+</style>

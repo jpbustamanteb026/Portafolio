@@ -7,14 +7,16 @@
   <div class="entrada-experiencia">
     <p class="fecha-anio">2025</p>
     <div class="linea"></div>
-    <h3 class="titulo-experiencia">
-      Alliance Bioversity International and CIAT
-    </h3>
-    <p class="puesto-experiencia">Practicante</p>
-    <p class="experiencia-descripcion">
-      Desarrollador Frontend en la aplicación Campus Map, un mapa interactivo
-      estilo Waze/Google Maps para guiar a los visitantes dentro del campus.
-    </p>
+    <div class="texto-experiencia">
+      <h3 class="titulo-experiencia">
+        Alliance Bioversity International and CIAT
+      </h3>
+      <p class="puesto-experiencia">Practicante</p>
+      <p class="experiencia-descripcion">
+        Desarrollador Frontend en la aplicación Campus Map, un mapa interactivo
+        estilo Waze/Google Maps para guiar a los visitantes dentro del campus.
+      </p>
+    </div>
   </div>
 </div>
 
@@ -41,10 +43,16 @@
     background: var(--color-blanco);
   }
 
+  .texto-experiencia {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
   .titulo-experiencia {
-    text-align: justify;
+    text-align: center;
     color: var(--color-blanco);
-    font-size: var(--lead-font-size-mobile);
+    font-size: var(--subtitle1-font-size-mobile);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-140);
   }
@@ -54,11 +62,46 @@
     font-size: var(--lead-font-size-mobile);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-140);
+    text-align: center;
   }
 
   .experiencia-descripcion {
+    text-align: justify;
     color: var(--color-blanco);
     font-size: var(--lead-font-size-mobile);
     line-height: var(--line-height-140);
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .fecha-anio {
+      justify-content: center;
+      font-size: var(--h4-font-size);
+      align-items: center;
+    }
+    .entrada-experiencia {
+      flex-direction: row;
+      gap: 1.25rem;
+    }
+
+    .linea {
+      height: 0.12rem;
+      width: 1.3rem;
+    }
+
+    .titulo-experiencia {
+      text-align: start;
+      font-size: var(--subtitle1-font-size);
+    }
+
+    .puesto-experiencia {
+      font-size: var(--subtitle2-font-size);
+      text-align: start;
+    }
+
+    .experiencia-descripcion {
+      text-align: justify;
+      font-size: var(--lead-font-size);
+    }
   }
 </style>

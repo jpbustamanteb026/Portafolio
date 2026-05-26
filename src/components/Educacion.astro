@@ -23,16 +23,27 @@
     align-self: start;
   }
 
-  .item h3 {
+  .titulo-experiencia {
     color: var(--color-blanco);
     font-size: var(--lead-font-size-mobile);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-140);
   }
 
-  .item p {
+  .experiencia-descripcion {
     color: var(--Blanco, #d7d7d7);
     font-size: var(--lead-font-size-mobile);
     line-height: var(--line-height-140);
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .titulo-experiencia {
+      font-size: var(--subtitle1-font-size);
+    }
+
+    .experiencia-descripcion {
+      font-size: var(--lead-font-size);
+    }
   }
 </style>
