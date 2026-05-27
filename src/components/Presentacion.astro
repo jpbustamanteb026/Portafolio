@@ -5,8 +5,17 @@ import { Image } from "astro:assets";
 import "../styles/index.css";
 import BtnSelector from "./BtnSelector.astro";
 
+const baseDir = import.meta.env.BASE_URL;
+
+// Función para asegurar que la ruta al PDF no genere dobles barras en Vercel
+const getAssetPath = (path: string) => {
+  const merged = `${baseDir}/${path}`;
+  return merged.replace(/\/+/g, "/");
+};
+
 const texto = "Descargar Hoja de Vida";
-const url = "/hoja-de-vida.pdf";
+
+const url = getAssetPath("CV_Juan_Pablo_Bustamante.pdf");
 ---
 
 <div class="presentacion">
