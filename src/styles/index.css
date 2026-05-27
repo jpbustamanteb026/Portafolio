@@ -53,27 +53,6 @@
   letter-spacing: 0.2275rem;
 }
 
-.boton-hoja-vida {
-  border-radius: 30px;
-  border: 2px solid var(--color-blanco);
-  display: flex;
-  padding: 17px 28px;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-blanco);
-  text-align: center;
-  text-decoration: none;
-  font-family: var(--cuerpo);
-  font-size: var(--lead-font-size-mobile);
-  font-style: normal;
-  line-height: var(--line-height-140);
-}
-
-.boton-hoja-vida:active {
-  color: var(--color-rosa);
-  border-color: var(--color-rosa);
-}
-
 .imagen-japonesa {
   display: flex;
   justify-content: flex-end;
@@ -99,10 +78,6 @@
     font-size: 2rem;
     letter-spacing: 0.42rem;
   }
-
-  .boton-hoja-vida {
-    font-size: var(--lead-font-size);
-  }
 }
 
 /* Desktop */
@@ -120,14 +95,6 @@
     justify-content: center;
     align-items: center;
     gap: 3.25rem;
-  }
-
-  .boton-hoja-vida:hover {
-    border-color: var(--color-rosa);
-    color: var(--color-rosa);
-    transition:
-      border-color 0.3s ease,
-      color 0.3s ease;
   }
 
   #japonesa {

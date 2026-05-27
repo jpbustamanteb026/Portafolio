@@ -3,6 +3,10 @@ import japonesa from "../assets/japonesaSinBg.webp";
 import BotonesPresentacion from "./BotonesPresentacion.astro";
 import { Image } from "astro:assets";
 import "../styles/index.css";
+import BtnSelector from "./BtnSelector.astro";
+
+const texto = "Descargar Hoja de Vida";
+const url = "/hoja-de-vida.pdf";
 ---
 
 <div class="presentacion">
@@ -13,7 +17,7 @@ import "../styles/index.css";
       <p class="titulo">Desarrollador Web</p>
     </hgroup>
 
-    <a href="#" class="boton-hoja-vida">Descargar Hoja de Vida</a>
+    <BtnSelector texto={texto} url={url} />
 
     <BotonesPresentacion />
   </div>

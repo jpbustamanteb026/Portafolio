@@ -1,0 +1,51 @@
+---
+const { texto, url, color } = Astro.props;
+---
+
+<a href={url} class="boton-hoja-vida" style={{ "--hover-color": color }}
+  >{texto}</a
+>
+
+<style>
+  .boton-hoja-vida {
+    border-radius: 30px;
+    border: 2px solid var(--color-blanco);
+    display: flex;
+    padding: 17px 28px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-blanco);
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--cuerpo);
+    font-size: var(--lead-font-size-mobile);
+    font-style: normal;
+    line-height: var(--line-height-140);
+  }
+
+  .boton-hoja-vida:active {
+    border-color: var(--color-blanco);
+    background-color: var(--color-blanco);
+    color: var(--hover-color);
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .boton-hoja-vida {
+      font-size: var(--lead-font-size);
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 1025px) {
+    .boton-hoja-vida:hover {
+      border-color: var(--color-blanco);
+      background-color: var(--color-blanco);
+      color: var(--hover-color);
+      transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+    }
+  }
+</style>

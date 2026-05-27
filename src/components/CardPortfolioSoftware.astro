@@ -1,16 +1,104 @@
 ---
-import "../styles/portafolio.css";
-
+import { Image } from "astro:assets";
+import BtnSelector from "./BtnSelector.astro";
+import BtnSelectorPortafolio from "./BtnSelectorPortafolio.astro";
 const { items } = Astro.props;
 ---
 
-<section class="project-list">
+<section class="projects">
   {
     items.map((item: any) => (
-      <a href={item.url} class="project-item">
-        <img src={item.imgbg} alt={item.name} class="project-bg" />
-        <span>{item.name}</span>
-      </a>
+      <div
+        class="project-card"
+        tabindex="0"
+        style={`background-color: ${item.color};`}
+      >
+        <div class="project-overlay">
+          <div class="project-name">{item.name}</div>
+          <div class="project-description">
+            <span>{item.description}</span>
+          </div>
+          <div class="project-buttons">
+            <BtnSelectorPortafolio
+              texto={item.textoBtnRepositorio}
+              url={item.urlRepositorio}
+              color={item.color}
+            />
+            <BtnSelectorPortafolio
+              texto={item.textoBtnDemo}
+              url={item.urlDemo}
+              color={item.color}
+            />
+          </div>
+        </div>
+      </div>
     ))
   }
 </section>
+
+<style>
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    padding: 40px;
+    max-width: 420px;
+    border-radius: 2.5rem;
+    border: 4px solid var(--color-blanco);
+
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: top; /* Centra la imagen para que no se corte mal */
+    background-repeat: no-repeat;
+  }
+
+  .project-overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-name {
+    font-size: var(--display-font-size-mobile);
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .project-buttons {
+    display: none;
+  }
+
+  .project-card:hover .project-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .project-description {
+    text-align: center;
+    font-size: var(--lead-font-size-mobile);
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .project-name {
+      font-size: var(--display-font-size);
+    }
+
+    .project-card {
+      max-width: 550px;
+    }
+
+    .project-description {
+      font-size: var(--lead-font-size);
+    }
+  }
+</style>

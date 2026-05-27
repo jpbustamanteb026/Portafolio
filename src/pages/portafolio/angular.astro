@@ -1,10 +1,29 @@
 ---
 import BtnBackPortafolio from "../../components/BtnBackPortafolio.astro";
 import Layout from "../../layouts/Layout.astro";
+import CardPortfolioSoftware from "../../components/CardPortfolioSoftware.astro";
+import "../../styles/portafolio.css";
 
 const titulo = "ANGULAR";
+
+const stack = [
+  {
+    color: "#358541",
+    name: "CAMPUS MAP",
+    textoBtnRepositorio: "Repositorio",
+    urlRepositorio:
+      "https://github.com/AllianceBioversityCIAT/alliance-campusmap",
+    textoBtnDemo: "Demo",
+    urlDemo: "https://d3e9f51uy3dvsk.cloudfront.net/home",
+    description:
+      "Mapa interactivo 3D de la Alliance Bioversity and CIAT. Su intención es ayudar a los usuario a ubicarse dentro del campus de Palmira en tiempo real.",
+  },
+];
 ---
 
 <Layout>
-  <BtnBackPortafolio titulo={titulo} />
+  <div class="cuerpo">
+    <BtnBackPortafolio titulo={titulo} />
+    <CardPortfolioSoftware items={stack} />
+  </div>
 </Layout>

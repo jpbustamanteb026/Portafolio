@@ -1,19 +1,28 @@
 ---
 import BtnBackPortafolio from "../../components/BtnBackPortafolio.astro";
 import Layout from "../../layouts/Layout.astro";
+import CardPortfolioSoftware from "../../components/CardPortfolioSoftware.astro";
+import "../../styles/portafolio.css";
 
 const titulo = "ASTRO";
+
+const stack = [
+  {
+    color: "#e76489",
+    name: "PORTAFOLIO",
+    textoBtnRepositorio: "Repositorio",
+    urlRepositorio: "https://github.com/jpbustamanteb026/Portafolio",
+    textoBtnDemo: "Demo",
+    urlDemo: "https://jpbustamanteb026.github.io/Portafolio/",
+    description:
+      "Portafolio desarrollado completamente por mí, desde la optimización de las imágenes y SVG, hasta la creación de componentes reutilizables.",
+  },
+];
 ---
 
 <Layout>
-  <BtnBackPortafolio titulo={titulo} />
+  <div class="cuerpo">
+    <BtnBackPortafolio titulo={titulo} />
+    <CardPortfolioSoftware items={stack} />
+  </div>
 </Layout>
-
-<style>
-  body {
-    background-color: var(--color-negro);
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-  }
-</style>
