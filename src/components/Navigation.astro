@@ -1,35 +1,40 @@
 ---
 const { pathname } = Astro.url;
 
-// Una función de normalización más segura que no rompe las rutas absolutas del navegador
-const normalize = (path: string) => {
-  const cleaned = path.replace(/\/+$/, ""); // Quita barras al final
-  return cleaned.startsWith("/") ? cleaned : `/${cleaned}`; // Se asegura de que empiece con /
-};
-
-const currentPath = normalize(pathname);
-
+const siteUrl = Astro.site ? Astro.site.origin : "";
 const baseDir = import.meta.env.BASE_URL;
 
-const basePath = normalize(baseDir);
-const sobreMiPath = normalize(`${baseDir}/sobremi`);
-const resumePath = normalize(`${baseDir}/resume`);
-const portafolioPath = normalize(`${baseDir}/portafolio`);
+const cleanPath = (path: string) =>
+  path.replace(/\/+/g, "/").replace(/\/$/, "") || "/";
+
+const currentPath = cleanPath(pathname);
+
+const basePath = cleanPath(baseDir);
+const sobreMiPath = cleanPath(`${baseDir}/sobremi`);
+const resumePath = cleanPath(`${baseDir}/resume`);
+const portafolioPath = cleanPath(`${baseDir}/portafolio`);
 
 const isPortafolioActive =
   currentPath === portafolioPath ||
   currentPath.startsWith(`${portafolioPath}/`);
+
+const getHref = (path: string) => {
+  const merged = `${baseDir}/${path}`;
+  const finalized = merged.replace(/\/+/g, "/");
+  return finalized.startsWith("/") ? finalized : `/${finalized}`;
+};
 ---
 
 <div id="main-menu" class="nav-links">
   <a href={basePath} class={currentPath === basePath ? "active" : ""}>Inicio</a>
-  <a href={sobreMiPath} class={currentPath === sobreMiPath ? "active" : ""}
-    >Sobre mí</a
+  <a
+    href={getHref("sobremi")}
+    class={currentPath === sobreMiPath ? "active" : ""}>Sobre mí</a
   >
-  <a href={resumePath} class={currentPath === resumePath ? "active" : ""}
+  <a href={getHref("resume")} class={currentPath === resumePath ? "active" : ""}
     >Resume</a
   >
-  <a href={portafolioPath} class={isPortafolioActive ? "active" : ""}
+  <a href={getHref("portafolio")} class={isPortafolioActive ? "active" : ""}
     >Portafolio</a
   >
 </div>
