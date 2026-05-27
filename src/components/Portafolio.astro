@@ -1,28 +1,33 @@
 ---
 import Cards from "./CardPortfolio.astro";
 
-const base = import.meta.env.BASE_URL;
+const baseDir = import.meta.env.BASE_URL;
+
+const getPath = (path: string) => {
+  const merged = `${baseDir}/${path}`;
+  return merged.replace(/\/+/g, "/");
+};
 
 const stack = [
   {
     name: "ANGULAR",
-    icon: `${base}/icons/angular.svg`,
-    url: `${base}/portafolio/angular`,
+    icon: getPath("icons/angular.svg"),
+    url: getPath("portafolio/angular"),
   },
   {
     name: "ASTRO",
-    icon: `${base}/icons/astro.svg`,
-    url: `${base}/portafolio/astro`,
+    icon: getPath("icons/astro.svg"),
+    url: getPath("portafolio/astro"),
   },
   {
     name: "MAQUETAS",
-    icon: `${base}/icons/figma.svg`,
-    url: `${base}/portafolio/maquetas`,
+    icon: getPath("icons/figma.svg"),
+    url: getPath("portafolio/maquetas"),
   },
   {
     name: "PRÓXIMAMENTE",
-    icon: `${base}/icons/proximamente.svg`,
-    url: `${base}/portafolio/proximamente`,
+    icon: getPath("icons/proximamente.svg"),
+    url: getPath("portafolio/proximamente"),
   },
 ];
 ---

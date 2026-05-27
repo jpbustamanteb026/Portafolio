@@ -1,23 +1,28 @@
 ---
 import Stack from "./Stack.astro";
 
-const base = import.meta.env.BASE_URL;
+const baseDir = import.meta.env.BASE_URL;
+
+const getIconPath = (path: string) => {
+  const merged = `${baseDir}/${path}`;
+  return merged.replace(/\/+/g, "/");
+};
 
 const desarrollo = [
-  { name: "HTML", icon: `${base}/icons/html.svg` },
-  { name: "CSS", icon: `${base}/icons/css.svg` },
-  { name: "JavaScript", icon: `${base}/icons/javascript.svg` },
-  { name: "TypeScript", icon: `${base}/icons/typescript.svg` },
-  { name: "Angular", icon: `${base}/icons/angular.svg` },
-  { name: "Astro", icon: `${base}/icons/astro.svg` },
+  { name: "HTML", icon: getIconPath("icons/html.svg") },
+  { name: "CSS", icon: getIconPath("icons/css.svg") },
+  { name: "JavaScript", icon: getIconPath("icons/javascript.svg") },
+  { name: "TypeScript", icon: getIconPath("icons/typescript.svg") },
+  { name: "Angular", icon: getIconPath("icons/angular.svg") },
+  { name: "Astro", icon: getIconPath("icons/astro.svg") },
 ];
 
 const diseno = [
-  { name: "Figma", icon: `${base}/icons/figma.svg` },
-  { name: "Photoshop", icon: `${base}/icons/photoshop.svg` },
-  { name: "Illustrator", icon: `${base}/icons/illustrator.svg` },
-  { name: "Affinity", icon: `${base}/icons/affinity.svg` },
-  { name: "Inkscape", icon: `${base}/icons/inkscape.svg` },
+  { name: "Figma", icon: getIconPath("icons/figma.svg") },
+  { name: "Photoshop", icon: getIconPath("icons/photoshop.svg") },
+  { name: "Illustrator", icon: getIconPath("icons/illustrator.svg") },
+  { name: "Affinity", icon: getIconPath("icons/affinity.svg") },
+  { name: "Inkscape", icon: getIconPath("icons/inkscape.svg") },
 ];
 ---
 
