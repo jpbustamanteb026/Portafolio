@@ -1,10 +1,15 @@
 ---
-const base = import.meta.env.BASE_URL;
+const baseDir = import.meta.env.BASE_URL;
 
 const { titulo } = Astro.props;
+
+const getPath = (path: string) => {
+  const merged = `${baseDir}/${path}`;
+  return merged.replace(/\/+/g, "/");
+};
 ---
 
-<a href={`${base}/portafolio`} class="back-link">
+<a href={getPath("portafolio")} class="back-link">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="14"
