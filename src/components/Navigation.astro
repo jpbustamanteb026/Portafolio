@@ -1,17 +1,20 @@
 ---
-import { base } from "astro:config/client";
-
-// Mantiene el color Rosa en la ventana seleccionada
 const { pathname } = Astro.url;
 
-const normalize = (path: string) => path.replace(/\/$/, "") || "/";
+// Una función de normalización más segura que no rompe las rutas absolutas del navegador
+const normalize = (path: string) => {
+  const cleaned = path.replace(/\/+$/, ""); // Quita barras al final
+  return cleaned.startsWith("/") ? cleaned : `/${cleaned}`; // Se asegura de que empiece con /
+};
 
 const currentPath = normalize(pathname);
-const basePath = normalize(base || "/");
 
-const sobreMiPath = normalize(`${base}/sobremi`);
-const resumePath = normalize(`${base}/resume`);
-const portafolioPath = normalize(`${base}/portafolio`);
+const baseDir = import.meta.env.BASE_URL;
+
+const basePath = normalize(baseDir);
+const sobreMiPath = normalize(`${baseDir}/sobremi`);
+const resumePath = normalize(`${baseDir}/resume`);
+const portafolioPath = normalize(`${baseDir}/portafolio`);
 
 const isPortafolioActive =
   currentPath === portafolioPath ||
@@ -19,17 +22,14 @@ const isPortafolioActive =
 ---
 
 <div id="main-menu" class="nav-links">
-  <a href={base || "/"} class={currentPath === basePath ? "active" : ""}
-    >Inicio</a
+  <a href={basePath} class={currentPath === basePath ? "active" : ""}>Inicio</a>
+  <a href={sobreMiPath} class={currentPath === sobreMiPath ? "active" : ""}
+    >Sobre mí</a
   >
-  <a
-    href={`${base}/sobremi`}
-    class={currentPath === sobreMiPath ? "active" : ""}>Sobre mí</a
-  >
-  <a href={`${base}/resume`} class={currentPath === resumePath ? "active" : ""}
+  <a href={resumePath} class={currentPath === resumePath ? "active" : ""}
     >Resume</a
   >
-  <a href={`${base}/portafolio`} class={isPortafolioActive ? "active" : ""}
+  <a href={portafolioPath} class={isPortafolioActive ? "active" : ""}
     >Portafolio</a
   >
 </div>
