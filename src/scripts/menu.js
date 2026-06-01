@@ -5,5 +5,7 @@ document.addEventListener("astro:page-load", () => {
     const isExpanded = menu.getAttribute("aria-expanded") === "true";
 
     menu.setAttribute("aria-expanded", `${!isExpanded}`);
+
+    menu.classList.toggle("is-open");
   });
 });

@@ -27,7 +27,7 @@
   font-weight: 700;
   line-height: 120%;
   text-decoration: underline;
-  text-decoration-color: var(--Rosa, #e76489);
+  text-decoration-color: var(--color-rosa);
 }
 
 .categoria {
@@ -37,8 +37,10 @@
   align-items: center;
   gap: 1.25rem;
   align-self: stretch;
+  border: 1px solid;
   border-radius: 1.25rem;
-  background: var(--Gris-Oscuro, #3f3f3f);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
   font-family: var(--cuerpo);
 }
 

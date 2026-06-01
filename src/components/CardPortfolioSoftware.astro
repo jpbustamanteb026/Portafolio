@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import BtnSelector from "./BtnSelector.astro";
 import BtnSelectorPortafolio from "./BtnSelectorPortafolio.astro";
 const { items } = Astro.props;
 ---
@@ -8,11 +6,7 @@ const { items } = Astro.props;
 <section class="projects">
   {
     items.map((item: any) => (
-      <div
-        class="project-card"
-        tabindex="0"
-        style={`background-color: ${item.color};`}
-      >
+      <div class="project-card" tabindex="0" style="background-color: none;">
         <div class="project-overlay">
           <div class="project-name">{item.name}</div>
           <div class="project-description">
