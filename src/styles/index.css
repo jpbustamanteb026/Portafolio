@@ -62,6 +62,8 @@
 #japonesa {
   height: 35dvh;
   width: auto;
+  aspect-ratio: 223 / 288;
+  object-fit: contain;
 }
 
 /* Tablet */
