@@ -1,7 +1,7 @@
 ---
 import japonesa from "../assets/japonesaSinBg.webp";
 import BotonesPresentacion from "./BotonesPresentacion.astro";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import "../styles/index.css";
 import BtnSelector from "./BtnSelector.astro";
 
@@ -32,6 +32,36 @@ const url = getAssetPath("CV_Juan_Pablo_Bustamante.pdf");
   </div>
 
   <div class="imagen-japonesa">
-    <Image src={japonesa} alt="japonesa" id="japonesa" loading="eager" />
+    <Picture
+      src={japonesa}
+      alt="japonesa"
+      id="japonesa"
+      loading="eager"
+      fetchpriority="high"
+      formats={["webp"]}
+      widths={[223, 446, 740, 940]}
+      sizes="(max-width: 767px) 223px, (max-width: 1024px) 370px, 460px"
+    />
   </div>
 </div>
+
+<!--
+
+<Image
+  src={miImagenJaponesa}
+  alt="Tu descripción aquí"
+  widths={[300, 600, 1200]}
+  sizes="(max-width: 768px) 250px, (max-width: 1025px) 600px, 1200px"
+  class="tu-clase-css-actual"
+/>
+
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+}
+-->
