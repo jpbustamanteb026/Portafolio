@@ -1,17 +1,20 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="categoria">
-  <h2 class="titulo-categoria">Educación</h2>
+  <h2 class="titulo-categoria">{t("education.title")}</h2>
   <article class="item">
-    <h3 class="titulo-experiencia">Ingeniería Multimedia</h3>
-    <p class="experiencia-descripcion">Universidad San Buenaventura Cali</p>
+    <h3 class="titulo-experiencia">{t("education.degree")}</h3>
+    <p class="experiencia-descripcion">{t("education.school")}</p>
   </article>
   <article class="item">
-    <h3 class="titulo-experiencia">Miembro / Investigador</h3>
+    <h3 class="titulo-experiencia">{t("education.member")}</h3>
     <p class="experiencia-descripcion">
-      Semillero de Investigación PADIA - Universidad San Buenaventura Cali
+      {t("education.group")}
     </p>
   </article>
 </div>

@@ -1,35 +1,33 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import Stack from "./Stack.astro";
 
-const baseDir = import.meta.env.BASE_URL;
-
-const getIconPath = (path: string) => {
-  const merged = `${baseDir}/${path}`;
-  return merged.replace(/\/+/g, "/");
-};
-
 const desarrollo = [
-  { name: "HTML", icon: getIconPath("icons/html.svg") },
-  { name: "CSS", icon: getIconPath("icons/css.svg") },
-  { name: "JavaScript", icon: getIconPath("icons/javascript.svg") },
-  { name: "TypeScript", icon: getIconPath("icons/typescript.svg") },
-  { name: "Angular", icon: getIconPath("icons/angular.svg") },
-  { name: "Astro", icon: getIconPath("icons/astro.svg") },
+  { name: "HTML", icon: "/icons/html.svg" },
+  { name: "CSS", icon: "/icons/css.svg" },
+  { name: "JavaScript", icon: "/icons/javascript.svg" },
+  { name: "TypeScript", icon: "/icons/typescript.svg" },
+  { name: "Angular", icon: "/icons/angular.svg" },
+  { name: "Astro", icon: "/icons/astro.svg" },
 ];
 
 const diseno = [
-  { name: "Figma", icon: getIconPath("icons/figma.svg") },
-  { name: "Photoshop", icon: getIconPath("icons/photoshop.svg") },
-  { name: "Illustrator", icon: getIconPath("icons/illustrator.svg") },
-  { name: "Affinity", icon: getIconPath("icons/affinity.svg") },
-  { name: "Inkscape", icon: getIconPath("icons/inkscape.svg") },
+  { name: "Figma", icon: "/icons/figma.svg" },
+  { name: "Photoshop", icon: "/icons/photoshop.svg" },
+  { name: "Illustrator", icon: "/icons/illustrator.svg" },
+  { name: "Affinity", icon: "/icons/affinity.svg" },
+  { name: "Inkscape", icon: "/icons/inkscape.svg" },
 ];
 ---
 
 <div class="categoria">
   <h2 class="titulo-categoria">Software</h2>
   <div class="sub-categoria">
-    <Stack title="DESARROLLO" items={desarrollo} />
-    <Stack title="COMPLEMENTO" items={diseno} />
+    <Stack title={t("software.development")} items={desarrollo} />
+    <Stack title={t("software.design")} items={diseno} />
   </div>
 </div>

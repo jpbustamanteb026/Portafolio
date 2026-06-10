@@ -1,0 +1,42 @@
+---
+import BtnBackPortafolio from "../../../components/BtnBackPortafolio.astro";
+import Layout from "../../../layouts/Layout.astro";
+import CardPortfolioSoftware from "../../../components/CardPortfolioSoftware.astro";
+import "../../../styles/portafolio.css";
+
+const titulo = "MOCKUPS";
+
+const stack = [
+  {
+    color: "#e76489",
+    name: "PORTFOLIO",
+    textoBtnRepositorio: "Design board",
+    urlRepositorio:
+      "https://www.figma.com/design/vmCppvK0BeaJENdfdIAiZl/Portafolio?node-id=0-1&t=YwQBPJRnH3bbrvVD-1",
+    textoBtnDemo: "Prototype",
+    urlDemo:
+      "https://www.figma.com/proto/vmCppvK0BeaJENdfdIAiZl/Portafolio?node-id=1-2&p=f&t=yg5hFtMyBKWX3r28-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A93",
+    description:
+      "Initial portfolio concept before development. Fully functional prototype.",
+  },
+  {
+    color: "#358541",
+    name: "CAMPUS MAP",
+    textoBtnRepositorio: "Design board",
+    urlRepositorio:
+      "https://www.figma.com/design/6WozWQHFniG5JLHlEhlXBD/CAMPUS-MAP?node-id=0-1&t=YwQBPJRnH3bbrvVD-1",
+    textoBtnDemo: "Prototype",
+    urlDemo:
+      "https://www.figma.com/proto/6WozWQHFniG5JLHlEhlXBD/CAMPUS-MAP?node-id=243-2420&p=f&t=2QWzFXvHk4Z1Itiw-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A93",
+    description:
+      "Initial Campus Map concept. As I engaged with the client, the final product (in the Angular category) evolved significantly.",
+  },
+];
+---
+
+<Layout>
+  <div class="cuerpo">
+    <BtnBackPortafolio titulo={titulo} />
+    <CardPortfolioSoftware items={stack} />
+  </div>
+</Layout>

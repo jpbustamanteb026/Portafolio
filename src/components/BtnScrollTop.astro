@@ -1,17 +1,9 @@
 ---
-const baseDir = import.meta.env.BASE_URL;
 
-const getAssetPath = (path: string) => {
-  const merged = `${baseDir}/${path}`;
-  return merged.replace(/\/+/g, "/");
-};
 ---
 
 <div class="flecha-top" id="btnScrollTop">
-  <img
-    src={getAssetPath("icons/flecha-arriba.svg")}
-    alt="volver a la parte superior"
-  />
+  <img src="/icons/flecha-arriba.svg" alt="volver a la parte superior" />
 </div>
 
 <script>

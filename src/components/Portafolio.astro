@@ -1,39 +1,38 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Cards from "./CardPortfolio.astro";
 
-const baseDir = import.meta.env.BASE_URL;
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const getPath = (path: string) => {
-  const merged = `${baseDir}/${path}`;
-  return merged.replace(/\/+/g, "/");
-};
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const stack = [
   {
     name: "ANGULAR",
-    icon: getPath("icons/angular.svg"),
-    url: getPath("portafolio/angular"),
+    icon: "/icons/angular.svg",
+    url: `/${lang}/portafolio/angular`,
   },
   {
     name: "ASTRO",
-    icon: getPath("icons/astro.svg"),
-    url: getPath("portafolio/astro"),
+    icon: "/icons/astro.svg",
+    url: `/${lang}/portafolio/astro`,
   },
   {
-    name: "MAQUETAS",
-    icon: getPath("icons/figma.svg"),
-    url: getPath("portafolio/maquetas"),
+    name: t("portfolio.category.mockups"),
+    icon: "/icons/figma.svg",
+    url: `/${lang}/portafolio/maquetas`,
   },
   {
-    name: "PRÓXIMAMENTE",
-    icon: getPath("icons/proximamente.svg"),
-    url: getPath("portafolio/proximamente"),
+    name: t("portfolio.category.comingSoon"),
+    icon: "/icons/proximamente.svg",
+    url: `/${lang}/portafolio/proximamente`,
   },
 ];
 ---
 
 <div class="cuerpo">
-  <h2 class="titulo">PORTAFOLIO</h2>
+  <h2 class="titulo">{t("portfolio.title")}</h2>
   <Cards items={stack} />
 </div>
 

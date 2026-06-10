@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Boton Selector Idioma
+const currentLang = Astro.currentLocale || "es";
+
+const nextLang = currentLang === "es" ? "en" : "es";
+
+const { pathname } = Astro.url;
+
+let newPath = pathname;
+if (pathname.startsWith(`/${currentLang}`)) {
+  newPath = pathname.replace(`/${currentLang}`, `/${nextLang}`);
+} else {
+  newPath = `/${nextLang}${pathname}`;
+}
+
+newPath = newPath.replace(/\/$/, "") + "/";
+---
+
+<div class="lang-switch">
+  <a href={newPath} aria-label={t("lang.switchAria")}>
+    {currentLang.toUpperCase()}
+  </a>
+</div>
+
+<style>
+  .lang-switch {
+    display: flex;
+    padding: 24px 24px 0;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .lang-switch a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-blanco);
+    font-size: var(--h2-font-size-mobile);
+    display: inline-block;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    .lang-switch {
+      padding: 20px 24px 0 0;
+      position: absolute;
+      right: 0;
+      z-index: 2;
+    }
+
+    .lang-switch a {
+      font-size: var(--lead-font-size);
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .lang-switch a:hover {
+      color: var(--color-rosa);
+      transition: color 0.2s ease;
+    }
+  }
+</style>

@@ -19,11 +19,13 @@ const { items } = Astro.props;
                 url={item.urlRepositorio}
                 color={item.color}
               />
-              <BtnSelectorPortafolio
-                texto={item.textoBtnDemo}
-                url={item.urlDemo}
-                color={item.color}
-              />
+              {item.urlDemo ? (
+                <BtnSelectorPortafolio
+                  texto={item.textoBtnDemo}
+                  url={item.urlDemo}
+                  color={item.color}
+                />
+              ) : null}
             </div>
           </div>
         </div>

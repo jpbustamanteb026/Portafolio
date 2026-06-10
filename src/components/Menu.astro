@@ -1,12 +1,15 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="menu-place">
   <button
     aria-expanded="false"
     aria-controls="main-menu"
-    aria-label="Abrir menú de navegación"
+    aria-label={t("menu.openNavigation")}
     class="menu"
   >
     <svg

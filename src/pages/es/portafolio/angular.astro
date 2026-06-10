@@ -1,8 +1,13 @@
 ---
-import BtnBackPortafolio from "../../components/BtnBackPortafolio.astro";
-import Layout from "../../layouts/Layout.astro";
-import CardPortfolioSoftware from "../../components/CardPortfolioSoftware.astro";
-import "../../styles/portafolio.css";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+import BtnBackPortafolio from "../../../components/BtnBackPortafolio.astro";
+import Layout from "../../../layouts/Layout.astro";
+import CardPortfolioSoftware from "../../../components/CardPortfolioSoftware.astro";
+import "../../../styles/portafolio.css";
 
 const titulo = "ANGULAR";
 
@@ -10,7 +15,7 @@ const stack = [
   {
     color: "#358541",
     name: "CAMPUS MAP",
-    textoBtnRepositorio: "Repositorio",
+    textoBtnRepositorio: t("btn.repository"),
     urlRepositorio:
       "https://github.com/AllianceBioversityCIAT/alliance-campusmap",
     textoBtnDemo: "Demo",

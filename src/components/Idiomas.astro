@@ -1,16 +1,19 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="categoria">
-  <h2 class="titulo-categoria">Idiomas</h2>
+  <h2 class="titulo-categoria">{t("languages.title")}</h2>
   <dl class="idiomas">
     <div class="idioma">
       <dt>Español</dt>
-      <dd>Nativo</dd>
+      <dd>{t("languages.spanishLevel")}</dd>
     </div>
     <div class="idioma">
-      <dt>Inglés</dt>
+      <dt>{t("languages.english")}</dt>
       <dd>B2</dd>
     </div>
   </dl>

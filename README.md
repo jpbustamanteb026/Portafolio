@@ -2,10 +2,6 @@
 
 Sitio web personal con información de presentación, portafolio, hoja de vida y sección sobre mí. Construido con Astro.
 
-## Demo en vivo
-
-[Ver Proyecto](https://jpbustamanteb026.github.io/Portafolio/)
-
 ## Páginas
 
 - **Inicio** — presentación con nombre, título y redes sociales

@@ -1,4 +1,5 @@
 ---
+import LangSwitcher from "./LangSwitcher.astro";
 import Menu from "./Menu.astro";
 import Navigation from "./Navigation.astro";
 ---
@@ -7,5 +8,13 @@ import Navigation from "./Navigation.astro";
   <nav>
     <Menu />
     <Navigation />
+    <LangSwitcher />
   </nav>
 </header>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

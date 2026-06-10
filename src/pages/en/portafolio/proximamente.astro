@@ -1,0 +1,28 @@
+---
+import BtnBackPortafolio from "../../../components/BtnBackPortafolio.astro";
+import Layout from "../../../layouts/Layout.astro";
+import CardPortfolioSoftware from "../../../components/CardPortfolioSoftware.astro";
+import "../../../styles/portafolio.css";
+
+const titulo = "COMING SOON";
+
+const stack = [
+  {
+    color: "#3f3f3f",
+    name: "Climate Simulation Dashboard",
+    textoBtnRepositorio: "Repository",
+    urlRepositorio: "#",
+    textoBtnDemo: "Demo",
+    urlDemo: "#",
+    description:
+      "A web application built in Angular to render interactive environmental data visualizations or complex ecological simulations (for example, resource behavior in an ecosystem).",
+  },
+];
+---
+
+<Layout>
+  <div class="cuerpo">
+    <BtnBackPortafolio titulo={titulo} />
+    <CardPortfolioSoftware items={stack} />
+  </div>
+</Layout>

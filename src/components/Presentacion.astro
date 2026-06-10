@@ -4,18 +4,14 @@ import BotonesPresentacion from "./BotonesPresentacion.astro";
 import { Picture } from "astro:assets";
 import "../styles/index.css";
 import BtnSelector from "./BtnSelector.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const baseDir = import.meta.env.BASE_URL;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-// Función para asegurar que la ruta al PDF no genere dobles barras en Vercel
-const getAssetPath = (path: string) => {
-  const merged = `${baseDir}/${path}`;
-  return merged.replace(/\/+/g, "/");
-};
+const texto = t("home.downloadCv");
 
-const texto = "Descargar Hoja de Vida";
-
-const url = getAssetPath("CV_Juan_Pablo_Bustamante.pdf");
+const url = "/CV_Juan_Pablo_Bustamante.pdf";
 ---
 
 <div class="presentacion">
@@ -23,7 +19,7 @@ const url = getAssetPath("CV_Juan_Pablo_Bustamante.pdf");
     <hgroup class="nombre-titulo">
       <p class="nombre">JUAN PABLO</p>
       <h1 class="apellido">BUSTAMANTE</h1>
-      <p class="titulo">Desarrollador Web</p>
+      <p class="titulo">{t("home.role")}</p>
     </hgroup>
 
     <BtnSelector texto={texto} url={url} />

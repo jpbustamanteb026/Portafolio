@@ -1,40 +1,34 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const { pathname } = Astro.url;
 
-const siteUrl = Astro.site ? Astro.site.origin : "";
-const baseDir = import.meta.env.BASE_URL;
+const currentPath = pathname;
 
-const cleanPath = (path: string) =>
-  path.replace(/\/+/g, "/").replace(/\/$/, "") || "/";
-
-const currentPath = cleanPath(pathname);
-
-const basePath = cleanPath(baseDir);
-const sobreMiPath = cleanPath(`${baseDir}/sobremi`);
-const resumePath = cleanPath(`${baseDir}/resume`);
-const portafolioPath = cleanPath(`${baseDir}/portafolio`);
+const basePath = `/${lang}/`;
+const sobreMiPath = `/${lang}/sobremi/`;
+const resumePath = `/${lang}/resume/`;
+const portafolioPath = `/${lang}/portafolio/`;
 
 const isPortafolioActive =
   currentPath === portafolioPath ||
   currentPath.startsWith(`${portafolioPath}/`);
-
-const getHref = (path: string) => {
-  const merged = `${baseDir}/${path}`;
-  const finalized = merged.replace(/\/+/g, "/");
-  return finalized.startsWith("/") ? finalized : `/${finalized}`;
-};
 ---
 
 <div id="main-menu" class="nav-links">
-  <a href={basePath} class={currentPath === basePath ? "active" : ""}>Inicio</a>
-  <a
-    href={getHref("sobremi")}
-    class={currentPath === sobreMiPath ? "active" : ""}>Sobre mí</a
+  <a href={basePath} class={currentPath === basePath ? "active" : ""}
+    >{t("nav.home")}</a
   >
-  <a href={getHref("resume")} class={currentPath === resumePath ? "active" : ""}
-    >Resume</a
+  <a href={sobreMiPath} class={currentPath === sobreMiPath ? "active" : ""}
+    >{t("nav.about")}</a
   >
-  <a href={getHref("portafolio")} class={isPortafolioActive ? "active" : ""}
-    >Portafolio</a
+  <a href={resumePath} class={currentPath === resumePath ? "active" : ""}
+    >{t("nav.resume")}</a
+  >
+  <a href={portafolioPath} class={isPortafolioActive ? "active" : ""}
+    >{t("nav.portfolio")}</a
   >
 </div>

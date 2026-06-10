@@ -2,19 +2,19 @@
 import yo from "../assets/yo.webp";
 import { Image } from "astro:assets";
 import "../styles/sobremi.css";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="cuerpo">
   <div class="texto">
-    <h2 class="titulo">SOBRE MÍ</h2>
+    <h2 class="titulo">{t("nav.about")}</h2>
     <p class="parrafo">
-      Soy ingeniero multimedia enfocado en desarrollo web. Trabajo
-      principalmente con tecnologías como HTML, CSS, JavaScript, Typescript,
-      Astro y Angular.
+      {t("about.description")}
       <br /><br />
-      Complemento mi formación con conocimientos en UX/UI y herramientas de diseño,
-      lo que me permite desarrollar interfaces funcionales, visualmente consistentes
-      y centradas en la experiencia de usuario.
+      {t("about.description2")}
     </p>
 
     <address class="ciudad">
