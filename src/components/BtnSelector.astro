@@ -1,8 +1,20 @@
 ---
 const { texto, url } = Astro.props;
+
+const { pathname } = Astro.url;
+
+const esIngles = pathname.startsWith("/en/") || pathname.includes("/en/");
+
+const rutaRealPdf = esIngles
+  ? "/CV_Juan_Bustamante_EN.pdf"
+  : "/CV_Juan_Bustamante_ES.pdf";
+
+const nombreArchivo = esIngles
+  ? "CV_Juan_Bustamante_EN.pdf"
+  : "CV_Juan_Bustamante_ES.pdf";
 ---
 
-<a href={url} download="CV_Juan_Pablo_Bustamante.pdf" class="boton-hoja-vida"
+<a href={rutaRealPdf} download={nombreArchivo} class="boton-hoja-vida"
   >{texto}</a
 >
 

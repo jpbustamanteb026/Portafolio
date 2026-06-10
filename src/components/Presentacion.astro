@@ -10,8 +10,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const texto = t("home.downloadCv");
-
-const url = "/CV_Juan_Pablo_Bustamante.pdf";
 ---
 
 <div class="presentacion">
@@ -22,7 +20,7 @@ const url = "/CV_Juan_Pablo_Bustamante.pdf";
       <p class="titulo">{t("home.role")}</p>
     </hgroup>
 
-    <BtnSelector texto={texto} url={url} />
+    <BtnSelector texto={texto} />
 
     <BotonesPresentacion />
   </div>
