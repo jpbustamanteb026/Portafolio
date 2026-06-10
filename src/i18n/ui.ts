@@ -28,9 +28,9 @@ export const ui = {
     "about.location": "Cali, Colombia",
     "experience.title": "Experiencia",
     "experience.company": "Alliance Bioversity International and CIAT",
-    "experience.role": "Practicante",
+    "experience.role": "Desarrollador Frontend",
     "experience.description":
-      "Desarrollador Frontend en la aplicación Campus Map, un mapa interactivo estilo Waze/Google Maps para guiar a los visitantes dentro del campus.",
+      "Practicante como desarrollador Frontend en la aplicación Campus Map, un mapa interactivo estilo Waze/Google Maps para guiar a los visitantes dentro del campus.",
     "education.title": "Educación",
     "education.degree": "Ingeniería Multimedia",
     "education.school": "Universidad San Buenaventura Cali",
@@ -81,9 +81,9 @@ export const ui = {
     "about.location": "Cali, Colombia",
     "experience.title": "Experience",
     "experience.company": "Alliance Bioversity International and CIAT",
-    "experience.role": "Intern",
+    "experience.role": "Frontend Developer",
     "experience.description":
-      "Frontend Developer on the Campus Map application, an interactive map styled like Waze/Google Maps to guide visitors inside the campus.",
+      "Intern as a Frontend Developer on the Campus Map application, an interactive map styled like Waze/Google Maps to guide visitors inside the campus.",
     "education.title": "Education",
     "education.degree": "Multimedia Engineering",
     "education.school": "Universidad San Buenaventura Cali",
