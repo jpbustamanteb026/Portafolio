@@ -44,13 +44,14 @@
 }
 
 .titulo {
+  padding-inline: 24px;
   color: var(--color-blanco);
   text-align: center;
   font-family: var(--titulos);
   font-size: var(--subtitle1-font-size);
   font-weight: 300;
   line-height: var(--line-height-120);
-  letter-spacing: 0.2275rem;
+  letter-spacing: 0.14rem;
 }
 
 .imagen-japonesa {
@@ -60,7 +61,7 @@
 }
 
 #japonesa {
-  height: 35dvh;
+  height: 30dvh;
   width: auto;
   aspect-ratio: 223 / 288;
   object-fit: contain;
@@ -78,7 +79,7 @@
 
   .titulo {
     font-size: 2rem;
-    letter-spacing: 0.42rem;
+    letter-spacing: 0.35rem;
   }
 }
 

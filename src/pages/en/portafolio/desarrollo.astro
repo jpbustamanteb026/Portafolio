@@ -1,0 +1,39 @@
+---
+import BtnBackPortafolio from "../../../components/BtnBackPortafolio.astro";
+import Layout from "../../../layouts/Layout.astro";
+import CardPortfolioSoftware from "../../../components/CardPortfolioSoftware.astro";
+import "../../../styles/portafolio.css";
+
+const titulo = "DEVELOPMENT";
+
+const stack = [
+  {
+    color: "#358541",
+    name: "CAMPUS MAP",
+    textoBtnRepositorio: "Repository",
+    urlRepositorio:
+      "https://github.com/AllianceBioversityCIAT/alliance-campusmap",
+    textoBtnDemo: "Demo",
+    urlDemo: "https://d3e9f51uy3dvsk.cloudfront.net/home",
+    description:
+      "An interactive web app for real-time campus navigation at one of the world's leading agricultural research centers. Built end-to-end during my internship: from UI components in Figma to a production Angular app deployed on AWS. Lets users locate buildings, find routes, and explore points of interest across the CIAT campus.",
+  },
+  {
+    color: "#e76489",
+    name: "PORTAFOLIO",
+    textoBtnRepositorio: "Repository",
+    urlRepositorio: "https://github.com/jpbustamanteb026/Portafolio",
+    textoBtnDemo: "Demo",
+    urlDemo: "https://juanpablobustamante.com/",
+    description:
+      "Portfolio developed entirely by me, from the optimization of images and SVG, to the creation of reusable components.",
+  },
+];
+---
+
+<Layout>
+  <div class="cuerpo">
+    <BtnBackPortafolio titulo={titulo} />
+    <CardPortfolioSoftware items={stack} />
+  </div>
+</Layout>
