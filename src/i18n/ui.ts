@@ -22,7 +22,7 @@ export const ui = {
     "contact.copyFail": "No se pudo copiar el correo",
     "about.title": "SOBRE MÍ",
     "about.description":
-      "Soy ingeniero multimedia enfocado en desarrollo web. Trabajo principalmente con tecnologías como HTML, CSS, JavaScript, TypeScript, Astro y Angular.",
+      "Soy ingeniero multimedia enfocado en desarrollo frontend. Trabajo principalmente con tecnologías como HTML, CSS, JavaScript, TypeScript, Astro y Angular.",
     "about.description2":
       "Complemento mi formación con conocimientos en UX/UI y herramientas de diseño, lo que me permite desarrollar interfaces funcionales, visualmente consistentes y centradas en la experiencia de usuario.",
     "about.location": "Cali, Colombia",
@@ -73,7 +73,7 @@ export const ui = {
     "contact.copyFail": "Could not copy email",
     "about.title": "ABOUT ME",
     "about.description":
-      "I am a multimedia engineer focused on web development. I mainly work with technologies like HTML, CSS, JavaScript, TypeScript, Astro, and Angular.",
+      "I am a multimedia engineer focused on frontend development. I mainly work with technologies like HTML, CSS, JavaScript, TypeScript, Astro, and Angular.",
     "about.description2":
       "I complement my training with UX/UI knowledge and design tools, which allows me to build functional, visually consistent interfaces centered on user experience.",
     "about.location": "Cali, Colombia",
