@@ -87,7 +87,7 @@ export const ui = {
     "education.school": "Universidad San Buenaventura Cali",
     "education.member": "Member / Researcher",
     "education.group":
-      "PADIA Research Seedbed - Universidad San Buenaventura Cali",
+      "PADIA Research Group - Universidad San Buenaventura Cali",
     "skills.title": "Personal Skills",
     "skills.fastLearning": "Fast learner",
     "skills.teamwork": "Team player",
