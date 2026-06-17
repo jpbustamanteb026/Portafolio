@@ -72,10 +72,10 @@ const { items } = Astro.props;
     text-align: justify;
     font-size: var(--lead-font-size-mobile);
     display: grid;
-    grid-template-rows: 4.5em;
-    transition: grid-template-rows 0.4s ease;
+    max-height: 4.5em;
+    transition: max-height 0.2s ease;
     overflow: hidden;
-    position: relative; /* añadido */
+    position: relative;
   }
 
   .project-description::after {
@@ -88,7 +88,7 @@ const { items } = Astro.props;
     /* Cambia este color al fondo real de tu card */
     background: linear-gradient(transparent, var(--color-negro));
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
   }
 
   .project-card:hover .project-description::after,
@@ -102,7 +102,7 @@ const { items } = Astro.props;
 
   .project-card:hover .project-description,
   .project-card:focus .project-description {
-    grid-template-rows: 12em;
+    max-height: 500px;
   }
 
   .project-buttons {
@@ -141,11 +141,6 @@ const { items } = Astro.props;
   @media screen and (min-width: 768px) {
     .project-name {
       font-size: var(--display-font-size);
-    }
-
-    .project-card:hover .project-description,
-    .project-card:focus .project-description {
-      grid-template-rows: 6em;
     }
 
     .project-card {
