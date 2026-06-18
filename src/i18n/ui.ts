@@ -94,7 +94,7 @@ export const ui = {
     "skills.proactive": "Proactive",
     "software.title": "Software",
     "software.development": "DEVELOPMENT",
-    "software.design": "DESIGN",
+    "software.design": "COMPLEMENT",
     "portfolio.title": "PROJECTS",
     "portfolio.category.development": "DEVELOPMENT",
     "portfolio.category.mockups": "MOCKUPS",
