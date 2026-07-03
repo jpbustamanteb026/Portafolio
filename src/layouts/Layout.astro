@@ -1,8 +1,9 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
-import "../styles/global.css";
 import "../styles/reset.css";
+import "../styles/global.css";
+
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -30,8 +31,6 @@ const t = useTranslations(lang);
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
-      media="print"
-      onload="this.media='all'"
     />
 
     <noscript>
@@ -47,9 +46,7 @@ const t = useTranslations(lang);
     <main>
       <slot />
     </main>
-    <script>
-      import "../scripts/menu";
-    </script>
+    <script src="../scripts/menu"></script>
   </body>
 </html>
 
