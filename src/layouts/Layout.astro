@@ -3,11 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 import "../styles/reset.css";
 import "../styles/global.css";
-
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { inject } from "@vercel/analytics";
-
-inject();
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
