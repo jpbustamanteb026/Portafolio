@@ -74,9 +74,12 @@
   --tiny-font-size-mobile: 0.6875rem;
 }
 
+html,
 body {
   font-family: var(--cuerpo);
+  font-weight: var(--font-weight-regular);
   color: var(--color-blanco);
+  background-color: var(--color-negro);
 }
 
 /* Menu */
