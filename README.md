@@ -1,18 +1,18 @@
 # Juan Pablo Bustamante — Portafolio
 
-Sitio web personal con información de presentación, portafolio, hoja de vida y sección sobre mí. Construido con Astro.
+Sitio web personal con información de presentación, sobre mí, resume y proyectos. Construido con Astro.
 
 ## Páginas
 
 - **Inicio** — presentación con nombre, título y redes sociales
-- **Portafolio** — proyectos con tecnologías usadas (Angular, Astro, Figma)
 - **Sobre mí** — habilidades personales, stack técnico, educación e idiomas
-- **Resume** — experiencia laboral (CIAT — Campus Map)
+- **Resume** — experiencia laboral
+- **Proyectos** — proyectos con tecnologías usadas
 
 ## Tecnologías
 
 - [Astro](https://astro.build/) v6
-- HTML5 semántico + CSS3 (variables, custom properties)
+- HTML + CSS
 - JavaScript / TypeScript
 
 ## Estructura
@@ -31,8 +31,8 @@ public/
 ## Correr localmente
 
 ```bash
-git clone git@github.com:jpbustamanteb026/pagina.git
-cd pagina
+git clone git@github.com:jpbustamanteb026/portafolio.git
+cd portafolio
 pnpm install
 pnpm dev
 ```
