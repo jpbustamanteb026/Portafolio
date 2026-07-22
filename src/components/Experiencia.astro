@@ -8,6 +8,7 @@ const t = useTranslations(lang);
 <div class="categoria">
   <h2 class="titulo-categoria">{t("experience.title")}</h2>
   <div class="entrada-experiencia">
+    <!-- CIAT -->
     <p class="fecha-anio">2025</p>
     <div class="linea"></div>
     <div class="texto-experiencia">
@@ -17,6 +18,20 @@ const t = useTranslations(lang);
       <p class="puesto-experiencia">{t("experience.role")}</p>
       <p class="experiencia-descripcion">
         {t("experience.description")}
+      </p>
+    </div>
+  </div>
+  <!-- Freelance -->
+  <div class="entrada-experiencia">
+    <p class="fecha-anio">2025</p>
+    <div class="linea"></div>
+    <div class="texto-experiencia">
+      <h3 class="titulo-experiencia">Freelance</h3>
+      <p class="experiencia-descripcion">
+        <b>Endansys</b>{t("experience2.description")}
+      </p>
+      <p class="experiencia-descripcion">
+        <b>Geocluster</b>{t("experience3.description")}
       </p>
     </div>
   </div>
@@ -48,7 +63,7 @@ const t = useTranslations(lang);
   .texto-experiencia {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.32rem;
   }
 
   .titulo-experiencia {

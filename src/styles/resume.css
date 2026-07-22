@@ -20,7 +20,7 @@
 }
 
 .titulo-categoria {
-  color: var(--Blanco, #d7d7d7);
+  color: var(--color-blanco);
   text-align: center;
   font-family: var(--titulos);
   font-size: 1.875rem;

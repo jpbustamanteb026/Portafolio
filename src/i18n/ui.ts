@@ -30,7 +30,11 @@ export const ui = {
     "experience.company": "Alliance Bioversity International and CIAT",
     "experience.role": "Desarrollador Frontend",
     "experience.description":
-      "Practicante como desarrollador Frontend en la aplicación Campus Map, un mapa interactivo estilo Waze/Google Maps para guiar a los visitantes dentro del campus.",
+      "Prácticas profesionales como desarrollador Frontend en la aplicación Campus Map, un mapa interactivo estilo Waze/Google Maps para guiar a los visitantes dentro del campus.",
+    "experience2.description":
+      ", una aplicación basada en inteligencia artificial para la identificación y clasificación de especies en peligro de  extinción en Colombia.",
+    "experience3.description":
+      ", herramienta de aprendizaje automático no supervisado para clasificar zonas de riesgo sísmico en Sudamérica. ",
     "education.title": "Educación",
     "education.degree": "Ingeniería Multimedia",
     "education.school": "Universidad San Buenaventura Cali",
